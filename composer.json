@@ -2,6 +2,7 @@
     "name": "swedbank-spp/swedbank-payment-portal",
     "description": "The Swedbank Payment Portal API Library provides access to the online banking system through which e-commerce transactions can be initiated and fulfilled by facilitating the exchange of bank data.",
     "type": "library",
+    "version": "0.9.7",
     "autoload": {
         "psr-4": {
           "SwedbankPaymentPortal\\": "src/"
@@ -16,9 +17,9 @@
         "symfony/yaml": "~2.8|~3.0|~4.0|~5.0",
         "symfony/dependency-injection": "^2.8|^3.0|^4.0|^5.0",
         "symfony/config": "^2.8|^3.0|^4.0|^5.0",
-        "jms/serializer": "^1.1",
+        "jms/serializer": "^1.1|^3.0",
         "guzzlehttp/guzzle": "^5.0|^6.0|^7.0",
-        "doctrine/cache": "^1.6"
+        "doctrine/cache": "^2.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.2"

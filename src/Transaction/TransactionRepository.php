@@ -3,7 +3,7 @@
 namespace SwedbankPaymentPortal\Transaction;
 
 use Doctrine\Common\Cache\Cache;
-use Doctrine\Common\Cache\FilesystemCache;
+use Symfony\Component\Cache\Adapter\FilesystemAdapter;
 use SwedbankPaymentPortal\Serializer;
 
 class TransactionRepository implements TransactionRepositoryInterface
@@ -49,7 +49,7 @@ class TransactionRepository implements TransactionRepositoryInterface
 
             case is_string($dir):
             case is_null($dir):
-                $this->fileCache = new FilesystemCache($dir ? $dir : sys_get_temp_dir() . '/banklink');
+                $this->fileCache = new FilesystemAdapter('', 0, $dir ?: sys_get_temp_dir() . '/banklink');
                 break;
 
             default:
